@@ -30,7 +30,7 @@ const total = slides.length;
 
 let current = 0;
 let autoplayTimer = null;
-const AUTOPLAY_DELAY = 5000;
+const AUTOPLAY_DELAY = 8000;
 
 function goTo(index) {
   current = (index + total) % total;
@@ -42,7 +42,7 @@ function goTo(index) {
     dot.classList.toggle('bg-white', active);
     dot.classList.toggle('w-8', active);
     dot.classList.toggle('bg-white/40', !active);
-    dot.classList.toggle('w-5', !active);
+    dot.classList.toggle('w-3', !active);
     dot.setAttribute('aria-selected', String(active));
   });
 }

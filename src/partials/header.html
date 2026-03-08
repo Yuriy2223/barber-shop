@@ -1,130 +1,129 @@
 <header
   id="site-header"
   role="banner"
-  class="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 lg:px-10 lg:py-6"
+  class="absolute top-0 left-0 right-0 z-50"
   aria-label="Головна навігація сайту"
 >
-  <a
-    href="/index.html"
-    aria-label="BarberShop — повернутися на головну"
-    title="Barber Shop"
-  >
-    <picture>
-      <source
-        media="(min-width: 768px)"
-        srcset="/logo-dark.svg"
-        width="69"
-        height="56"
-      />
-      <img
-        src="/logo-light.svg"
-        alt="BarberShop Kyiv — чоловіча перукарня"
-        class="w-full h-full object-cover object-center"
-        width="69"
-        height="56"
-        decoding="async"
-      />
-    </picture>
-  </a>
-
-  <nav
-    id="desktop-nav"
-    class="hidden lg:flex items-center gap-8 xl:gap-10"
-    aria-label="Основне меню"
+  <div
+    class="container mx-auto max-w-7xl flex items-center justify-between px-6 py-4 lg:px-10 lg:py-6"
   >
     <a
-      href="#about"
-      class="relative text-[#E8A045] text-sm font-medium tracking-wide group"
-      aria-current="page"
+      href="#hero"
+      aria-label="BarberShop — повернутися на головну"
+      title="Barber Shop"
     >
-      About
-      <span
-        class="absolute -bottom-1 left-0 w-full h-px bg-[#E8A045]"
-        aria-hidden="true"
-      ></span>
-      <span
-        class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-[#E8A045]"
-        aria-hidden="true"
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="/logo-dark.svg"
+          width="69"
+          height="56"
+        />
+        <img
+          src="/logo-light.svg"
+          alt="BarberShop Kyiv — чоловіча перукарня"
+          width="69"
+          height="56"
+          decoding="async"
+        />
+      </picture>
+    </a>
+
+    <nav
+      id="desktop-nav"
+      class="hidden lg:flex items-center justify-between w-[40%]"
+      aria-label="Основне меню"
+    >
+      <a
+        href="#about"
+        class="relative text-[#E8A045] text-base font-medium tracking-wide group"
+        aria-current="page"
       >
-        <svg
-          width="10"
-          height="10"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
+        About
+        <span
+          class="absolute -bottom-1 left-0 w-full h-px bg-[#E8A045]"
+          aria-hidden="true"
+        ></span>
+        <span
+          class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-[#E8A045]"
+          aria-hidden="true"
         >
-          <circle cx="12" cy="12" r="3" />
-          <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
-        </svg>
-      </span>
-    </a>
+          <svg
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="3" />
+            <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+          </svg>
+        </span>
+      </a>
+      <a
+        href="#services"
+        class="text-white/80 text-base font-medium tracking-wide hover:text-white transition-colors relative group"
+      >
+        Services and prices
+        <span
+          class="absolute -bottom-1 left-0 w-0 h-px bg-[#E8A045] group-hover:w-full transition-all duration-300"
+          aria-hidden="true"
+        ></span>
+      </a>
+      <a
+        href="#barbers"
+        class="text-white/80 text-base font-medium tracking-wide hover:text-white transition-colors relative group"
+      >
+        Barbers
+        <span
+          class="absolute -bottom-1 left-0 w-0 h-px bg-[#E8A045] group-hover:w-full transition-all duration-300"
+          aria-hidden="true"
+        ></span>
+      </a>
+      <a
+        href="#contacts"
+        class="text-white/80 text-base font-medium tracking-wide hover:text-white transition-colors relative group"
+      >
+        Contacts
+        <span
+          class="absolute -bottom-1 left-0 w-0 h-px bg-[#E8A045] group-hover:w-full transition-all duration-300"
+          aria-hidden="true"
+        ></span>
+      </a>
+    </nav>
 
-    <a
-      href="#services"
-      class="text-white/80 text-sm font-medium tracking-wide hover:text-white transition-colors relative group"
-    >
-      Services and prices
-      <span
-        class="absolute -bottom-1 left-0 w-0 h-px bg-[#E8A045] group-hover:w-full transition-all duration-300"
-        aria-hidden="true"
-      ></span>
-    </a>
+    <div class="hidden lg:flex items-center gap-10">
+      <a
+        href="tel:+380441111111"
+        class="text-white/90 text-sm font-medium tracking-wide hover:text-[#E8A045] transition-colors"
+        aria-label="Зателефонуйте нам: +38 044 111 11 11"
+      >
+        +38 044 111 11 11
+      </a>
+      <a
+        href="#booking"
+        class="border border-[#E8A045] text-[#E8A045] text-sm font-medium tracking-[0.15em] uppercase px-5 py-2.5 rounded-full hover:bg-[#E8A045] hover:text-white transition-all duration-300"
+        role="button"
+        aria-label="Онлайн запис до барбера"
+      >
+        Online-Booking
+      </a>
+    </div>
 
-    <a
-      href="#barbers"
-      class="text-white/80 text-sm font-medium tracking-wide hover:text-white transition-colors relative group"
+    <button
+      id="mobile-menu-toggle"
+      class="lg:hidden flex flex-col justify-center items-end w-10 h-10 gap-1.5 z-50"
+      aria-label="Відкрити меню"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      type="button"
     >
-      Barbers
-      <span
-        class="absolute -bottom-1 left-0 w-0 h-px bg-[#E8A045] group-hover:w-full transition-all duration-300"
-        aria-hidden="true"
-      ></span>
-    </a>
-
-    <a
-      href="#contacts"
-      class="text-white/80 text-sm font-medium tracking-wide hover:text-white transition-colors relative group"
-    >
-      Contacts
-      <span
-        class="absolute -bottom-1 left-0 w-0 h-px bg-[#E8A045] group-hover:w-full transition-all duration-300"
-        aria-hidden="true"
-      ></span>
-    </a>
-  </nav>
-
-  <div class="hidden lg:flex items-center gap-6 xl:gap-8">
-    <a
-      href="tel:+380441111111"
-      class="text-white/90 text-sm font-medium tracking-wide hover:text-[#E8A045] transition-colors"
-      aria-label="Зателефонуйте нам: +38 044 111 11 11"
-    >
-      +38 044 111 11 11
-    </a>
-
-    <a
-      href="#booking"
-      class="border border-[#E8A045] text-[#E8A045] text-xs font-semibold tracking-[0.15em] uppercase px-5 py-2.5 rounded-full hover:bg-[#E8A045] hover:text-black transition-all duration-300"
-      role="button"
-      aria-label="Онлайн запис до барбера"
-    >
-      Online-Booking
-    </a>
+      <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+      <span class="block w-4 h-0.5 bg-white transition-all duration-300"></span>
+      <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+    </button>
   </div>
-
-  <button
-    id="mobile-menu-toggle"
-    class="lg:hidden flex flex-col justify-center items-end w-10 h-10 gap-1.25 z-50"
-    aria-label="Відкрити меню"
-    aria-expanded="false"
-    aria-controls="mobile-menu"
-    type="button"
-  >
-    <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
-    <span class="block w-4 h-0.5 bg-white transition-all duration-300"></span>
-    <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
-  </button>
 </header>
 
 <div
@@ -132,7 +131,7 @@
   role="dialog"
   aria-modal="true"
   aria-label="Мобільне меню навігації"
-  class="fixed inset-0 z-100 bg-black/95 backdrop-blur-sm translate-x-full transition-transform duration-500 ease-in-out flex flex-col px-8 pt-6 pb-10"
+  class="fixed inset-y-0 right-0 z-50 w-full max-w-106.25 bg-black/95 backdrop-blur-sm translate-x-full transition-transform duration-500 ease-in-out flex flex-col px-8 pt-6 pb-10 overflow-y-auto"
 >
   <div class="flex justify-end mb-12">
     <button
@@ -142,8 +141,8 @@
       type="button"
     >
       <svg
-        width="24"
-        height="24"
+        width="36"
+        height="36"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -154,9 +153,8 @@
       </svg>
     </button>
   </div>
-
   <nav aria-label="Мобільне меню">
-    <ul class="flex flex-col gap-1" role="list">
+    <ul class="flex flex-col gap-4" role="list">
       <li>
         <a
           href="#about"
@@ -187,17 +185,57 @@
       </li>
     </ul>
   </nav>
+  <div class="flex flex-col items-center gap-6 mt-8">
+    <a
+      href="tel:+380441111111"
+      class="text-white text-lg font-medium hover:text-[#E8A045] transition-colors"
+      >+38 044 111 11 11</a
+    >
+    <a
+      href="#booking"
+      class="border border-[#E8A045] text-[#E8A045] text-sm font-semibold tracking-[0.12em] uppercase px-6 py-3 rounded-full hover:bg-[#E8A045] hover:text-white transition-all duration-300"
+      role="button"
+      >Online-Booking</a
+    >
+    <a
+      href="https://youtube.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group relative text-white hover:text-[#E8A045] transition-colors duration-300 text-[10px] font-medium tracking-[0.25em] uppercase"
+      aria-label="YouTube канал"
+    >
+      Youtube
+      <span
+        class="absolute -left-2 top-0 h-full w-px scale-y-0 group-hover:scale-y-100 bg-[#E8A045] transition-transform duration-300 origin-bottom"
+        aria-hidden="true"
+      ></span>
+    </a>
 
-  <a
-    href="tel:+380441111111"
-    class="mt-8 text-white text-lg font-medium hover:text-[#E8A045] transition-colors"
-    >+38 044 111 11 11</a
-  >
-
-  <a
-    href="#booking"
-    class="mt-4 self-start border border-[#E8A045] text-[#E8A045] text-sm font-semibold tracking-[0.12em] uppercase px-6 py-3 rounded-full hover:bg-[#E8A045] hover:text-black transition-all duration-300"
-    role="button"
-    >Online-Booking</a
-  >
+    <a
+      href="https://instagram.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group relative text-white hover:text-[#E8A045] transition-colors duration-300 text-[10px] font-medium tracking-[0.25em] uppercase"
+      aria-label="Instagram"
+    >
+      Instagram
+      <span
+        class="absolute -left-2 top-0 h-full w-px scale-y-0 group-hover:scale-y-100 bg-[#E8A045] transition-transform duration-300 origin-bottom"
+        aria-hidden="true"
+      ></span>
+    </a>
+    <a
+      href="https://facebook.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group relative text-white hover:text-[#E8A045] transition-colors duration-300 text-[10px] font-medium tracking-[0.25em] uppercase"
+      aria-label="Facebook"
+    >
+      Facebook
+      <span
+        class="absolute -left-2 top-0 h-full w-px scale-y-0 group-hover:scale-y-100 bg-[#E8A045] transition-transform duration-300 origin-bottom"
+        aria-hidden="true"
+      ></span>
+    </a>
+  </div>
 </div>
