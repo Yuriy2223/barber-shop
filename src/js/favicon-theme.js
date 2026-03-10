@@ -5,7 +5,7 @@ function updateFavicon() {
 
   const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  favicon.href = isDark ? '/logo-dark.svg' : '/logo-light.svg';
+  favicon.href = isDark ? '/logo-light.svg' : '/logo-dark.svg';
 }
 
 updateFavicon();
