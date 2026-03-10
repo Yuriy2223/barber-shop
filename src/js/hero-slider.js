@@ -7,7 +7,7 @@ const total = slides.length;
 
 let current = 0;
 let autoplayTimer = null;
-const AUTOPLAY_DELAY = 8000;
+const AUTOPLAY_DELAY = 6000;
 
 function goTo(index) {
   current = (index + total) % total;
