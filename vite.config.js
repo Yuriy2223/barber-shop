@@ -8,13 +8,16 @@ export default defineConfig({
   build: {
     outDir: '../dist',
   },
-  plugins: [
+   plugins: [
     tailwindcss(),
     injectHTML(),
     ViteImageOptimizer({
       png: { quality: 70 },
       jpeg: { quality: 70 },
       webp: { quality: 70 },
+      svg: {
+        multipass: true,
+      },
     }),
   ],
   server: {
