@@ -23,3 +23,10 @@ navLinks.forEach((link) => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeMenu();
 });
+
+document.addEventListener('click', (e) => {
+  const isOpen = !menu.classList.contains('translate-x-full');
+  if (isOpen && !menu.contains(e.target) && !toggle.contains(e.target)) {
+    closeMenu();
+  }
+});

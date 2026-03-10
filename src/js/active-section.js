@@ -2,6 +2,7 @@ const sections = document.querySelectorAll(
   '#about, #services, #stats, #barbers, #booking'
 );
 const navLinks = document.querySelectorAll('.nav-link');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 const header = document.querySelector('#site-header');
 
 const activeDot = `
@@ -20,9 +21,13 @@ function highlightActiveSection() {
     link.classList.remove('active');
     link.removeAttribute('aria-current');
     link.querySelector('.active-dot')?.remove();
-
     const line = link.querySelector('span:not(.active-dot)');
     if (line) line.classList.replace('w-full', 'w-0');
+  });
+
+  mobileNavLinks.forEach((link) => {
+    link.classList.remove('text-[#E8A045]', 'font-semibold');
+    link.classList.add('text-white');
   });
 
   if (scrollY < 100) return;
@@ -43,6 +48,14 @@ function highlightActiveSection() {
           if (line) line.classList.replace('w-0', 'w-full');
         }
       });
+
+      mobileNavLinks.forEach((link) => {
+        if (link.getAttribute('href') === `#${sectionId}`) {
+          link.classList.add('text-[#E8A045]', 'font-semibold');
+          link.classList.remove('text-white');
+        }
+      });
+
       break;
     }
   }
