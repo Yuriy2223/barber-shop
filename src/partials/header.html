@@ -1,27 +1,29 @@
 <header
   id="site-header"
   role="banner"
-  class="absolute top-0 left-0 right-0 z-50"
-  aria-label="Головна навігація сайту"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  aria-label="Main site navigation"
 >
   <div
     class="container mx-auto max-w-7xl flex items-center justify-between px-6 py-4 lg:px-10 lg:py-6"
   >
     <a
       href="#hero"
-      aria-label="BarberShop — повернутися на головну"
+      aria-label="BarberShop — men's barbershop"
       title="Barber Shop"
     >
       <picture>
         <source
+          id="header-logo-source"
           media="(min-width: 768px)"
           srcset="/logo-dark.svg"
           width="69"
           height="56"
         />
         <img
+          id="header-logo"
           src="/logo-light.svg"
-          alt="BarberShop Kyiv — чоловіча перукарня"
+          alt="BarberShop"
           width="69"
           height="56"
           decoding="async"
@@ -32,38 +34,21 @@
     <nav
       id="desktop-nav"
       class="hidden lg:flex items-center justify-between w-[40%]"
-      aria-label="Основне меню"
+      aria-label="Main menu"
     >
       <a
         href="#about"
-        class="relative text-[#E8A045] text-base font-medium tracking-wide group"
-        aria-current="page"
+        class="nav-link text-white/80 text-base font-medium tracking-wide hover:text-white transition-colors relative group"
       >
         About
         <span
-          class="absolute -bottom-1 left-0 w-full h-px bg-[#E8A045]"
+          class="absolute -bottom-1 left-0 w-0 h-px bg-[#E8A045] group-hover:w-full transition-all duration-300"
           aria-hidden="true"
         ></span>
-        <span
-          class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-[#E8A045]"
-          aria-hidden="true"
-        >
-          <svg
-            width="10"
-            height="10"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <circle cx="12" cy="12" r="3" />
-            <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
-          </svg>
-        </span>
       </a>
       <a
         href="#services"
-        class="text-white/80 text-base font-medium tracking-wide hover:text-white transition-colors relative group"
+        class="nav-link text-white/80 text-base font-medium tracking-wide hover:text-white transition-colors relative group"
       >
         Services
         <span
@@ -72,8 +57,8 @@
         ></span>
       </a>
       <a
-        href="#barbers"
-        class="text-white/80 text-base font-medium tracking-wide hover:text-white transition-colors relative group"
+        href="#stats"
+        class="nav-link text-white/80 text-base font-medium tracking-wide hover:text-white transition-colors relative group"
       >
         Stats
         <span
@@ -83,7 +68,7 @@
       </a>
       <a
         href="#barbers"
-        class="text-white/80 text-base font-medium tracking-wide hover:text-white transition-colors relative group"
+        class="nav-link text-white/80 text-base font-medium tracking-wide hover:text-white transition-colors relative group"
       >
         Barbers
         <span
@@ -92,8 +77,8 @@
         ></span>
       </a>
       <a
-        href="#contacts"
-        class="text-white/80 text-base font-medium tracking-wide hover:text-white transition-colors relative group"
+        href="#booking"
+        class="nav-link text-white/80 text-base font-medium tracking-wide hover:text-white transition-colors relative group"
       >
         Contacts
         <span
@@ -107,7 +92,7 @@
       <a
         href="tel:+380441111111"
         class="text-white/90 text-sm font-medium tracking-wide hover:text-[#E8A045] transition-colors"
-        aria-label="Зателефонуйте нам: +38 044 111 11 11"
+        aria-label="Call us: +38 044 111 11 11"
       >
         +38 044 111 11 11
       </a>
@@ -115,7 +100,7 @@
         href="#booking"
         class="border border-[#E8A045] text-[#E8A045] text-sm font-medium tracking-[0.15em] uppercase px-5 py-2.5 rounded-full hover:bg-[#E8A045] hover:text-white transition-all duration-300"
         role="button"
-        aria-label="Онлайн запис до барбера"
+        aria-label="Online appointment to the barber"
       >
         Online-Booking
       </a>
@@ -124,7 +109,7 @@
     <button
       id="mobile-menu-toggle"
       class="lg:hidden flex flex-col justify-center items-end w-10 h-10 gap-1.5 z-50"
-      aria-label="Відкрити меню"
+      aria-label="Open menu"
       aria-expanded="false"
       aria-controls="mobile-menu"
       type="button"
@@ -140,7 +125,7 @@
   id="mobile-menu"
   role="dialog"
   aria-modal="true"
-  aria-label="Мобільне меню навігації"
+  aria-label="Mobile Navigation Menu"
   class="fixed inset-y-0 right-0 z-50 w-full max-w-106.25 bg-black/95 backdrop-blur-sm translate-x-full transition-transform duration-500 ease-in-out flex flex-col px-8 pt-6 pb-10 overflow-y-auto"
 >
   <div class="flex justify-end mb-12">
