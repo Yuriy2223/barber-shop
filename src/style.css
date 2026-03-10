@@ -12,7 +12,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -65,4 +64,19 @@ body {
 
 .hero-parallax {
   will-change: transform;
+}
+
+.header-scrolled {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.nav-link.active {
+  color: #e8a045;
+}
+
+.nav-link.active span:first-of-type {
+  width: 100%;
 }
