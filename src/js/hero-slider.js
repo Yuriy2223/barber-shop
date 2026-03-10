@@ -14,6 +14,12 @@ function goTo(index) {
 
   slider.style.transform = `translateX(-${current * 100}%)`;
 
+  const parallaxOffset = window.scrollY * 0.15;
+  const img = slides[current]?.querySelector('img');
+  if (img) {
+    img.style.transform = `translateY(${parallaxOffset}px)`;
+  }
+
   dots.forEach((dot, i) => {
     const active = i === current;
     dot.classList.toggle('bg-white', active);
@@ -105,10 +111,11 @@ if (window.matchMedia('(min-width: 1024px)').matches) {
     () => {
       if (!tick) {
         requestAnimationFrame(() => {
+          const parallaxOffset = window.scrollY * 0.15;
           const img = activeImg();
-
-          if (img)
-            img.style.transform = `translateY(${window.scrollY * 0.18}px)`;
+          if (img) {
+            img.style.transform = `translateY(${parallaxOffset}px)`;
+          }
 
           tick = false;
         });

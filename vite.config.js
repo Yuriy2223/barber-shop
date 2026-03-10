@@ -7,6 +7,7 @@ export default defineConfig({
   root: 'src',
   build: {
     outDir: '../dist',
+    emptyOutDir: true,
   },
   plugins: [
     tailwindcss(),
@@ -15,6 +16,9 @@ export default defineConfig({
       png: { quality: 70 },
       jpeg: { quality: 70 },
       webp: { quality: 70 },
+      svg: {
+        multipass: true,
+      },
     }),
   ],
   server: {

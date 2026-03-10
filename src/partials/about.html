@@ -1,13 +1,14 @@
 <section
   id="about"
   class="bg-white"
-  aria-label="Про барбершоп — найкращий у місті"
+  aria-label="About barbershop — the best in the city"
 >
   <div
     class="container mx-auto max-w-7xl flex flex-col md:flex-row gap-8 px-6 py-15 md:py-25"
   >
     <div
-      class="hidden md:flex md:flex-col lg:flex-row w-full md:w-1/2 gap-6 lg:gap-8"
+      class="hidden md:flex md:flex-col lg:flex-row w-full md:w-1/2 gap-6 lg:gap-8 reveal-left"
+      data-reveal
     >
       <picture>
         <source
@@ -18,7 +19,7 @@
         />
         <img
           src="/about-tab-1.jpg"
-          alt="Барбер обслуговує клієнта — професійна стрижка бороди"
+          alt="Barber serving a client — professional beard trim"
           class="w-full h-auto object-cover"
           width="330"
           height="235"
@@ -36,7 +37,7 @@
         />
         <img
           src="/about-tab-2.jpg"
-          alt="Майстер стрижки за роботою — догляд за чоловічою зачіскою"
+          alt="Barber at work — men's haircut care"
           class="w-full h-auto object-cover"
           width="330"
           height="235"
@@ -46,7 +47,7 @@
       </picture>
     </div>
 
-    <div class="w-full md:w-1/2 flex flex-col gap-5">
+    <div class="w-full md:w-1/2 flex flex-col gap-5 reveal-right" data-reveal>
       <p
         class="flex items-center gap-3 text-[#303030] text-[11px] font-semibold tracking-widest uppercase"
       >
@@ -84,7 +85,7 @@
         href="#booking"
         class="flex items-center justify-center mt-4 border border-[#E8A045] text-[#303030] text-xs font-semibold tracking-[0.09em] w-40 h-10 uppercase rounded-full hover:bg-[#E8A045] hover:text-white transition-all duration-300"
         role="button"
-        aria-label="Онлайн запис до барбера"
+        aria-label="Online booking"
       >
         Online-Booking
       </a>
